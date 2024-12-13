@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #1a1a2e;
+  --text-color: #e0e0e0;
+  --accent-color: #16213e;
+  --highlight-color: #0f3460;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header, .studies, .tools, .sports-gallery {
+  background-color: var(--accent-color);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  border: 4px solid var(--highlight-color);
+  object-fit: cover;
+}
+
+.personal-info ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.personal-info li {
+  margin: 12px 0;
+  font-size: 18px;
+}
+
+.studies ol, .tools ul {
+  margin: 0 auto;
+  width: 80%;
+  padding-left: 24px;
+}
+
+.studies li, .tools li {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.sport {
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.sport:hover {
+  transform: scale(1.05);
+}
+
+.sport img {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sport p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .studies ol, .tools ul {
+    width: 100%;
+  }
+  
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
